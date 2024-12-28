@@ -1,0 +1,1 @@
+must output too console sum of numbers and result of multiplications
