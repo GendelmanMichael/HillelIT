@@ -1,0 +1,26 @@
+SQUARE SQUARE::operator=(const SQUARE &rhs)
+{
+    itsSide = new int; 
+    *itsSide = rhs.GetSide();
+    return *this:
+
+    // first need to check if it's the same object to
+    // prevent lost value during "new int" 
+    // or it's possible to use next trick:
+    // itsSide = new int(rhs.GetSide());
+    // or itsSide = &rhs.GetSide() in some cases
+}
+
+VeryShort VeryShort::operator+(const VeryShort &rhs) 
+
+// here need to write (VeryShort const &rhs)
+
+{
+	itsVal += rhs.GetItsVal();
+	return *this;
+    
+    // and for this pperator is better to return 
+    // new object instead of corrupting original 
+    // so the better scope will looks like 
+    // return VeryShort(itsVal + rhs.GetItsVal());
+}   
