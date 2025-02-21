@@ -39,10 +39,17 @@ private:
     unsigned short numberPassangers;
 };
 
+class B747 : public JetPlane
+{
+public:
+    B747(unsigned int tr, double wSq, char nMot, unsigned short nPass) : JetPlane(tr, wSq, nMot, nPass) {}
+    virtual ~B747() {}
+};
+
 int main()
 {
 
-    JetPlane *b747 = new JetPlane(296, 554, 4, 467);
+    B747 *b747 = new B747(296, 554, 4, 467);
 
     cout << "B747 has " << (short)(b747->GetMotorsNum()) << " motors" << endl;
     cout << "B747 has " << b747->GetPassengersNumber() << " swats" << endl;
