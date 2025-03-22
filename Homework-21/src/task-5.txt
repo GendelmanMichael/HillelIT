@@ -1,0 +1,18 @@
+
+
+List<Cat> Cat_List;
+Cat Felix;
+// for this expression class Cat 
+// must have default constructor
+CatList.append(Felix);
+cout << "Felix is "
+       << (Cat_List.is_present(Felix)) ? "" : "not "
+          << "present\n";
+// For the method "is_present" class Cat
+// need to have overrided operator "==".
+// but because Felix is undefined, any 
+// undefined cat in list can be equal all depends 
+// of current implementation of Cat and is_present. 
+// and the last problem in syntax of ternar
+// expression, need to put all ternar 
+// expression in to the brackets
